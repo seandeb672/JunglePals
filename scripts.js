@@ -178,4 +178,110 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Pop-Up Message for form submission
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.querySelector('#contactform form');
+
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Your query has been sent!');
+    contactForm.reset();
+  });
+});
+
+// The hover effect for contact info boxes
+$(document).ready(function() {
+  $('.mb-4').hover(
+    function() {
+      $(this).css({
+        'transform': 'scale(1.05)',
+        'box-shadow': '0 10px 20px rgba(0,0,0,0.3)'
+      });
+    },
+    function() {
+      $(this).css({
+        'transform': 'scale(1)',
+        'box-shadow': '0 4px 10px rgba(0,0,0,0.2)'
+      });
+    }
+  );
+});
+
+$(document).ready(function() {
+  const $checkboxes = $('input[name="readiness"]');
+  const $readyBtn = $('#ready-button');
+  const $speciesBox = $('#Species-Location');
+  const $searchBtn = $('#search-adopt');
+  const $speciesSelect = $('#Species');
+  const $locationSelect = $('#location-selector');
+  const $adoptDivs = $('#adopt-images > .adopt-card');
+  const $noResults = $('#no-results');
+
+  // hide the species/location and "No results" from the start
+  $speciesBox.hide();
+  $adoptDivs.hide();
+  $noResults.hide();
+
+  // Allow the ready button only when all the checkboxes are checked
+  $checkboxes.on('change', function() {
+    const allChecked = $checkboxes.length === $checkboxes.filter(':checked').length;
+    $readyBtn.prop('disabled', !allChecked);
+  });
+
+  $readyBtn.on('click', function() {
+    $speciesBox.slideDown();
+    $('html, body').animate({ scrollTop: $speciesBox.offset().top }, 600);
+  });
+
+  // Filter adoption cards on search
+  $searchBtn.on('click', function() {
+    const selectedSpecies = $speciesSelect.val();
+    const selectedLocation = $locationSelect.val();
+    let anyShown = false;
+
+    $adoptDivs.each(function() {
+      const $this = $(this);
+      const matches = $this.data('species') === selectedSpecies && $this.data('location') === selectedLocation;
+      $this.toggle(matches);
+      if (matches) anyShown = true;
+    });
+
+    $noResults.toggle(!anyShown);
+
+    // Scroll to results
+    if (anyShown || !anyShown) {
+      $('html, body').animate({ scrollTop: $('#adopt-images').offset().top }, 600);
+    }
+  });
+});
+
+$(document).ready(function() {
+  // Zoom on the images when you hover over them
+  $('img').hover(
+    function() {
+      $(this).css({
+        'transform': 'scale(1.05)',
+        'transition': 'transform 0.4s ease-in-out',
+        'box-shadow': '0 10px 20px rgba(0,0,0,0.3)'
+      });
+    },
+    function() {
+      $(this).css({
+        'transform': 'scale(1)',
+        'box-shadow': '0 4px 10px rgba(0,0,0,0.15)'
+      });
+    }
+  );
+
+
+  $('nav a').hover(
+    function() {
+      $(this).css({'color': '#ff7f50', 'transition': 'color 0.3s ease'});
+    },
+    function() {
+      $(this).css({'color': '', 'transition': 'color 0.3s ease'});
+    }
+  );
+});
+
 
