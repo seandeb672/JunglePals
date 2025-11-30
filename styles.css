@@ -1053,3 +1053,92 @@ input[type="checkbox"]:checked::after {
 	background: #dfaf36;
 }
 
+/* Contact us page styles */
+.col-12.text-center {
+  border-bottom: solid #dfaf36 8px;
+}
+
+#contactinfomiddle { 
+  border-bottom: solid #dfaf36 8px;
+  text-align: left;
+  font-size: larger;
+}
+
+#contactinfomiddle p { 
+  border-right: solid lightgray 4px;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+#opening-hours { 
+  text-align: left;
+  padding: 0;
+  list-style: none;
+  padding: 3px;
+  margin-bottom: 30px;
+}
+
+#opening-hours li {
+  line-height: 0.5;
+}
+
+.mb-4 {
+  background-color: #4caf50;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  text-shadow: #000 1px 1px 2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer; 
+}
+
+.mb-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#contactform { 
+  padding: 15px;
+  background-color: #4caf50;
+  border: #000 1px solid;
+  border-radius: 15px;
+  max-width: 85%;
+  margin: 0 auto ;
+}
+
+#contactform h3 { 
+  color: white;
+  text-shadow: #000 1px 1px 2px;
+  padding: 5px;
+}
+
+.btn.btn-primary {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fac26b;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #dfaf36;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#contactsection { 
+  border-bottom: solid #dfaf36 8px;
+  padding-bottom: 10px;
+}
