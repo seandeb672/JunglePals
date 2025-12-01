@@ -1,3 +1,4 @@
+  /* Liam Doherty CSS begins here*/
  body {
    font-family: 'Arial', sans-serif;
    margin: 0;
@@ -637,8 +638,10 @@
    }
  }
 
+ /* Liam Doherty CSS ends here*/
+
 .adoption { 
-  font:'Arial', sans-serif;
+  font-family:'Arial', sans-serif;
 }
 
 #adopt-intro { 
@@ -647,7 +650,9 @@
   padding: 40px;
   padding-bottom: 0px;
   font-size: larger;
+  margin-left: 10px;
 }
+
 
 #Monkey { 
   object-fit: contain;
@@ -656,11 +661,13 @@
   border-bottom: solid #dfaf36 8px;
 }
 
-#Monkey-Hug { 
+#Monkey-Hug {
   width: 100%;
+  height: auto;        /* keeps aspect ratio */
   max-width: 95%;
   max-height: 500px;
-  border: solid black 2px;
+  object-fit: contain; /* optional, prevents distortion if height cap hits */
+  display: block;
 }
 
 ul {
@@ -745,9 +752,6 @@ input[type="checkbox"]:checked::after {
 }
 
 
-#adopt-intro { 
-  margin-left: 10px;
-}
 
 #adopt-readiness { 
   margin-left: 10px;
@@ -1083,7 +1087,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .mb-4 {
-  background-color: #4caf50;
+  background-color: #497740;
   border: 1px solid gray;
   border-radius: 15px;
   padding: 10px;
@@ -1102,7 +1106,7 @@ input[type="checkbox"]:checked::after {
 
 #contactform { 
   padding: 15px;
-  background-color: #4caf50;
+  background-color: #497740;
   border: #000 1px solid;
   border-radius: 15px;
   max-width: 85%;
