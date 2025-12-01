@@ -255,24 +255,6 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  // Zoom on the images when you hover over them
-  $('img').hover(
-    function() {
-      $(this).css({
-        'transform': 'scale(1.05)',
-        'transition': 'transform 0.4s ease-in-out',
-        'box-shadow': '0 10px 20px rgba(0,0,0,0.3)'
-      });
-    },
-    function() {
-      $(this).css({
-        'transform': 'scale(1)',
-        'box-shadow': '0 4px 10px rgba(0,0,0,0.15)'
-      });
-    }
-  );
-
 
   $('nav a').hover(
     function() {
@@ -282,6 +264,10 @@ $(document).ready(function() {
       $(this).css({'color': '', 'transition': 'color 0.3s ease'});
     }
   );
-});
+;
+
+
+
+
 
 
