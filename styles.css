@@ -897,7 +897,7 @@ input[type="checkbox"]:checked::after {
 /*Help Page Hero*/
 
 .help-hero {
-	background-image: url("images/volunteer.jpg");
+	background-image: url("images/Background.jpg");
 	background-size: cover;
 	background-position: center;
 	color: #fff;
@@ -929,6 +929,11 @@ input[type="checkbox"]:checked::after {
 	max-width:1100px;
 	margin: 3rem auto;
 	padding: 0 1rem;
+	text-align: center;
+}
+
+.help-options-section h2 {
+	text-align: center;
 }
 
 .help-options-grid {
@@ -941,9 +946,10 @@ input[type="checkbox"]:checked::after {
 	background: #fff;
 	border-radius: 14px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-	padding-bottom:1rem;
+	padding:1.2rem 1.5rem 1.5rem;
 	text-align: center;
 	transition: transform .3s, box-shadow .3s;
+	overflow: hidden;
 }
 
 .help-card img {
@@ -951,6 +957,17 @@ input[type="checkbox"]:checked::after {
 	height: 220px;
 	object-fit: cover;
 	border-radius: 14px 14px 0 0;
+	margin-bottom: 1rem;
+}
+
+.help-card h2,
+.help-card h3 {
+	margin: 0 0 0.6rem 0;
+}
+
+.help-card p {
+	margin: 0 0 1rem 0;
+	line-height: 1.55;
 }
 
 .help-btn {
@@ -985,7 +1002,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .stories-hero {
-	background-image: url("images/adopted-gecko.jpg"); /*placeholder image*/
+	background-image: url("images/Background.jpg"); /*placeholder image*/
 	background-size:cover;
 	background-position:center;
 }
@@ -1026,9 +1043,10 @@ input[type="checkbox"]:checked::after {
 	background: #fff;
 	border-radius: 14px;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-	padding-bottom: 1rem;
+	padding: 1.2rem 1.5rem 1.5rem;
 	text-align: center;
 	transition: transform. 3s, box shadow .3s;
+	overflow: hidden;
 }
 
 .story-card img {
@@ -1036,6 +1054,16 @@ input[type="checkbox"]:checked::after {
 	height: 220px;
 	object-fit: cover;
 	border-radius: 14px 14px 0 0;
+	margin-bottom: 1rem;
+}
+
+.story-card h3 {
+	margin: 0 0 0.6rem 0;
+}
+
+.story-card p {
+	margin: 0 0 1rem 0;
+	line-height: 1.55;
 }
 
 .story-card:hover {
@@ -1146,3 +1174,4 @@ input[type="checkbox"]:checked::after {
   border-bottom: solid #dfaf36 8px;
   padding-bottom: 10px;
 }
+
