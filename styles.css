@@ -932,7 +932,7 @@ input[type="checkbox"]:checked::after {
 	margin-bottom: 0.75rem;
 	
 	/*green fill*/
-	color: #c5e1a5;
+	color: #6fa55a;
 	
 	/* white outer layer */
 	text-shadow:
@@ -1081,7 +1081,7 @@ input[type="checkbox"]:checked::after {
 	
 	/* repeated green*/
 	
-	color: #c5e1a5;
+	color: #6fa55a;
 	
 	text-shadow:
 	-2px -2px 0 #ffffff,
@@ -1325,6 +1325,7 @@ html, body {
   border-bottom: solid #dfaf36 8px;
   padding-bottom: 10px;
 }
+
 
 
 
