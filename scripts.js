@@ -266,6 +266,74 @@ $(document).ready(function() {
   );
 ;
 
+//full story modal
+
+document.addEventListener('DOMContentLoaded',() => {
+	const storyButtons = document.querySelectorAll('.story-btn');
+	if (!storyButtons.length) return; //ensure it only runs on stories page
+	
+	const storyData = {
+		gary: {
+			title: "Gary's Gone",
+			text: "When Gary first arrived at Jungle Pals he would rarely been seen by anyone, it took approximately a month before he started to move at night. We were concerned for Gary as we did not expect this reaction considering the environment he was now in. However, Gary slowly came around and eventually gained the confidence to pop out every so often. Once the Harrison family adopted him, he has gone from strength to strength and even loves chilling on Mr Harrison's shoulder!"
+		},
+		
+		charles: {
+			title:"Charles' New Adventure",
+			text:"Charles was very nervous and easily startled when he was rescued. The Marilyn family visited him every weekend prior to the adoption date, talking to him softly and bringing his favourite treats. Over time, Charles began to trust them and he is a super chatty and cofident Cockatoo today. We even have videos of him dancing!"
+		},
+		
+		sirius: {
+			title: "Sirius' Big Move",
+			text: "Sirius needed a lot of space and stimulation. We were concerned initially, as he refused to leave his bed due to his timid nature. Over time, however, he grew in confidence and made use of the play area we had for him. The Gray family were the perfect fit for Sirius, as they worked closely with our team at Jungle Pals to ensure their own garden and play area was safe and adequate in size for Sirius. Since his adoption Sirius has realised his love for ripping apart stuffed animals, much to the despair of Mr & Mrs Gray's daughter."
+		}
+	};
+	
+	
+	//creating modal element once
+	
+	const modal = document.createElement('div');
+	modal.id = 'storyModal';
+	modal.innerHTML = `
+		<div class="story-modal-content">
+			<h2 id="storyModalTitle"></h2>
+			<p id="storyModalText"></p>
+			<button type="button" class="story-modal-close">Close</button>
+		</div>
+	`;
+	
+	document.body.appendChild(modal);
+	
+	const titleEl = document.getElementById('storyModalTitle');
+	const textEl = document.getElementById('storyModalText');
+	const closeBtn = modal.querySelector('.story-modal-close');
+	
+	function openStory(key) {
+		const data = storyData[key];
+		if (!data) return;
+		titleEl.textContent = data.title;
+		textEl.textContent = data.text;
+		modal.style.display = 'flex';
+	}
+	
+	storyButtons.forEach(btn => {
+		btn.addEventListener('click', e=> {
+			e.preventDefault();
+			const key = btn.dataset.story;
+			openStory(key);
+		});
+	});
+	
+	//close on button click or backdrop click or escape
+	closeBtn.addEventListener('click', () => modal.style.display = 'none');
+	modal.addEventListener('click', e => {
+		if (e.target === modal) modal.style.display = 'none';
+	});
+	
+	document.addEventListener('keydown', e => {
+		if (e.key === 'Escape') modal.style.display = 'none';
+		});
+	});
 
 
 
