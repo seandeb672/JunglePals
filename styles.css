@@ -897,7 +897,7 @@ input[type="checkbox"]:checked::after {
 /*Help Page Hero*/
 
 .help-hero {
-	background-image: url("images/Background.jpg");
+	background-image: url("images/JunglePalsBackground.jpg");
 	background-size: cover;
 	background-position: center;
 	color: #fff;
@@ -1046,7 +1046,7 @@ input[type="checkbox"]:checked::after {
 }
 
 .stories-hero {
-	background-image: url("images/Background.jpg"); 
+	background-image: url("images/JunglePalsBackground.jpg"); 
 	background-size:cover;
 	background-position:center;
 	color: #fff;
@@ -1325,6 +1325,7 @@ html, body {
   border-bottom: solid #dfaf36 8px;
   padding-bottom: 10px;
 }
+
 
 
 
